@@ -1,0 +1,49 @@
+{
+  "name": "chirpy",
+  "version": "1.0.0",
+  "description": "Boot.dev Twitter clone",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "npx tsc && node dist/index.js",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
+    "test": "vitest --run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauricekoster/chirpy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mauricekoster/chirpy/issues"
+  },
+  "homepage": "https://github.com/mauricekoster/chirpy#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.0.0",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.6",
+    "vitest-mock-express": "^2.2.0"
+  },
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "drizzle-orm": "^0.45.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "postgres": "^3.4.9"
+  },
+  "allowScripts": {
+    "drizzle-kit@0.31.10": true,
+    "argon2@0.44.0": true,
+    "jsonwebtoken@9.0.3": true,
+    "vitest@3.2.6": true,
+    "vitest-mock-express@2.2.0": true
+  }
+}

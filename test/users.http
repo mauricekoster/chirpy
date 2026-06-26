@@ -1,0 +1,52 @@
+@HOST = http://localhost:8080
+
+## POST Users
+POST   {{HOST}}/api/users
+content-type: application/json
+
+{
+    "email": "a@example.com",
+    "password": "1234"
+    
+}
+
+### Get Chirps
+GET   {{HOST}}/api/chirps
+
+
+### Reset
+POST   {{HOST}}/admin/reset
+
+
+
+### POST Login (ok)
+POST   {{HOST}}/api/login
+content-type: application/json
+
+{
+  "email": "saul@bettercall.com",
+  "password": "123456"
+}
+
+### POST Login (nok)
+POST   {{HOST}}/api/login
+content-type: application/json
+
+{
+  "email": "saul@bettercall.com",
+  "password": "000011112222"
+}
+
+
+
+### POST Polka Webhook
+POST   {{HOST}}/api/polka/webhooks
+content-type: application/json
+Authorization: ApiKey f271c81ff7084ee5b99a5091b42d486e
+
+{
+  "event": "user.upgraded",
+  "data": {
+    "userId": "1234"
+  }
+}
